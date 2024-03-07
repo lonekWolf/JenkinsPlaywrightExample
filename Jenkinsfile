@@ -1,7 +1,8 @@
 pipeline {
   agent { 
     docker { 
-      image 'playwright/chrome:latest'
+      image 'mcr.microsoft.com/playwright:v1.42.1-jammy'
+      args '--privileged'
     } 
   }
   stages {
